@@ -1,0 +1,11 @@
+
+{
+  "name": "spanishpeaks",
+  "version": "0.1.0",
+  "description": "Spanish Peaks",
+  "author": {"name":"Sandstrom Partners","email":"webteam@sandstrompartners.com","url":"https://sandstrompartners.com/"},
+  "private": true,
+  "dependencies": {
+    "sanitize.css": "^8.0.0"
+  }
+}

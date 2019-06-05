@@ -1,0 +1,66 @@
+{
+  "name": "fdk-project",
+  "version": "2.1.9",
+  "description": "Fabrica Dev Kit for Wordpress Project",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fabrica-wp/dev-kit"
+  },
+  "private": true,
+  "author": "Fabrica <info@fabri.ca> (http://fabri.ca/)",
+  "scripts": {
+    "run": "gulp",
+    "deploy": "gulp deploy",
+    "dc": "docker-compose",
+    "sh": "docker-compose exec -u www-data wp /bin/bash",
+    "shroot": "docker-compose exec wp /bin/bash",
+    "wp": "docker-compose exec -u www-data -T wp wp",
+    "logs": "docker-compose logs -f --tail='46' wp | sed -e \"s/ WARNING: .* into stderr: \\\"\\(NOTICE: PHP message: \\)\\{0,1\\}\\(\\[[a-zA-Z0-9 :\\-]\\{1,\\}\\]\\)\\{0,1\\} \\{0,1\\}\\(.*\\)\\\"/ ⚠️  $(tput setaf 3)\\3$(tput sgr0)/\"",
+    "remove": "docker-compose down --volumes --rmi local"
+  },
+  "fabrica_dev_kit": {
+    "scripts_info": {
+      "run": "Run 'gulp'. Default task will watch and process source files.",
+      "dc": "Run 'docker-compose', eg. 'fdk dc ps'.",
+      "sh": "Start shell on WP container.",
+      "shroot": "Start shell as root on WP container.",
+      "wp": "Run WP Cli. eg. 'fdk wp option list' or 'fdk wp -- --info'",
+      "logs": "Tail WP container logs.",
+      "remove": "Stop all project containers, remove their volumes and WP project image."
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "autoprefixer": "^9.5.1",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "browser-sync": "^2.26.3",
+    "cssnano": "^4.1.10",
+    "del": "^4.1.0",
+    "gulp": "4.0",
+    "gulp-changed": "^3.2.0",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-postcss": "^8.0.0",
+    "gulp-posthtml": "^3.0.4",
+    "gulp-rename": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-tap": "^1.0.1",
+    "gulp-uglify": "^3.0.2",
+    "merge-stream": "^1.0.1",
+    "postcss-each": "^0.10.0",
+    "postcss-easy-media-query": "^1.0.0",
+    "postcss-fontpath": "^1.0.0",
+    "postcss-import": "^12.0.1",
+    "postcss-mixins": "^6.2.1",
+    "postcss-nested": "^4.1.2",
+    "postcss-nested-props": "^2.0.0",
+    "postcss-simple-vars": "^5.0.2",
+    "posthtml-bem": "^0.2.2",
+    "stylelint": "^10.0.0",
+    "stylelint-config-standard": "^18.3.0",
+    "vinyl-named": "^1.1.0",
+    "webpack-stream": "^5.2.1"
+  }
+}

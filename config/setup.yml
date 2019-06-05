@@ -1,0 +1,27 @@
+
+# Fabrica Dev Kit setup configuration
+# Modify for your project, then run `fdk setup` from this folder
+
+# Project settings
+slug: spanishpeaks # lowercase letters only (also used for theme slug and PHP namespacing)
+title: Spanish Peaks
+author:
+  name: Sandstrom Partners
+  email: webteam@sandstrompartners.com
+  url: https://sandstrompartners.com/
+
+# WordPress settings
+wp:
+  admin: # development site admin user credentials
+    user: spanishpeaksadmin
+    pass: Lz!7MWqYL4RvfRjv4o
+    email: webteam@sandstrompartners.com
+  lang: en_US # dev site WP locale/language
+  rewrite_structure: /%postname%/ # dev site permalink structure (can be changed later)
+  acf_pro_key: b3JkZXJfaWQ9MzU4Njd8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE0LTA3LTI2IDE5OjAyOjM4
+  plugins: # optional (installs plugins at setup - use URL slugs from WP plugins directory)
+  # - advanced-custom-fields
+  # - force-regenerate-thumbnails
+
+# Google Analytics - optional (will preset tracking code in theme, can be added manually later)
+# google_analytics_id:

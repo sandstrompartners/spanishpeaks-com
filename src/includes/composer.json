@@ -1,0 +1,8 @@
+
+{
+	"authors": [{"name":"Sandstrom Partners","email":"webteam@sandstrompartners.com","homepage":"https://sandstrompartners.com/"}],
+	"require": {
+		"timber/timber":"1.*",
+		"upstatement/routes": "*"
+	}
+}
